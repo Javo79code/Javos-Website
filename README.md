@@ -3,7 +3,7 @@
 Welcome to the GitHub repository for my personal portfolio website:  
 **[www.javokhirakhmadjonov.com](https://www.javokhirakhmadjonov.com)**  
 
-This website serves as my professional online presence, showcasing my **projects**, **skills**, and **experience** in **cybersecurity**, **software engineering**, and **data science**. It is designed to be modern, responsive, and easy to navigate.
+This website serves as my professional online presence, showcasing my **projects**, **skills**, and **experience** in **cybersecurity**, **software engineering**, and **data science**, and AI. It is designed to be modern, responsive, and easy to navigate.
 
 ---
 
