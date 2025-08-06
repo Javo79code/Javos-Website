@@ -1249,15 +1249,16 @@ footer ul li a {
     
     .name-typewriter {
         font-size: 1.8rem;
-        max-width: 85vw;
+        max-width: 95vw;
         overflow-wrap: break-word;
         word-break: break-word;
+        white-space: normal;
     }
     
     .info-box h1 {
         font-size: 2rem;
         max-width: 100%;
-        overflow: hidden;
+        overflow: visible;
         word-wrap: break-word;
     }
 }
@@ -1376,6 +1377,25 @@ footer ul li a {
     }
 }
 
+/* Mobile-specific typing animation */
+@media (max-width: 768px) {
+    .name-typewriter.typing {
+        animation: typing-mobile 4s steps(40, end), blink-caret .75s step-end 8;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes typing-mobile {
+    from { 
+        width: 0;
+        border-right-color: rgb(173, 216, 230);
+    }
+    to { 
+        width: 100%;
+        border-right-color: transparent;
+    }
+}
+
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: rgb(173, 216, 230); }
@@ -1385,26 +1405,28 @@ footer ul li a {
 @media (max-width: 768px) {
     .name-typewriter {
         font-size: 2rem;
-        max-width: 90vw;
+        max-width: 95vw;
         overflow-wrap: break-word;
         word-break: break-word;
+        white-space: normal;
     }
     
     .info-box h1 {
         font-size: 2.5rem;
         max-width: 100%;
-        overflow: hidden;
+        overflow: visible;
     }
 }
 
 @media (max-width: 480px) {
     .name-typewriter {
-        font-size: 1.8rem;
-        max-width: 85vw;
+        font-size: 1.6rem;
+        max-width: 95vw;
+        white-space: normal;
     }
     
     .info-box h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .info-box {

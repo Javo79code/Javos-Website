@@ -16,10 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.innerWidth <= 768) {
             const nameElement = document.getElementById('name');
             if (nameElement) {
-                // Ensure the name fits within the viewport
-                nameElement.style.maxWidth = '90vw';
-                nameElement.style.overflow = 'hidden';
+                // Ensure the name fits within the viewport but allows full animation
+                nameElement.style.maxWidth = '95vw';
+                nameElement.style.overflow = 'visible';
                 nameElement.style.wordWrap = 'break-word';
+                nameElement.style.whiteSpace = 'normal';
             }
         }
     }
