@@ -10,6 +10,23 @@ document.addEventListener('DOMContentLoaded', function() {
             nameElement.classList.add('typing');
         }, 500); // 500ms delay before starting
     }
+    
+    // Mobile-specific adjustments for typewriter animation
+    function adjustForMobile() {
+        if (window.innerWidth <= 768) {
+            const nameElement = document.getElementById('name');
+            if (nameElement) {
+                // Ensure the name fits within the viewport
+                nameElement.style.maxWidth = '90vw';
+                nameElement.style.overflow = 'hidden';
+                nameElement.style.wordWrap = 'break-word';
+            }
+        }
+    }
+    
+    // Call on load and resize
+    adjustForMobile();
+    window.addEventListener('resize', adjustForMobile);
 });
 
 // Start background animations immediately

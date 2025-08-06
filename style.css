@@ -1152,6 +1152,9 @@ footer ul li a {
 
     .info-box h1 {
         font-size: 2.5rem;
+        max-width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
     }
 
     .info-box span {
@@ -1165,6 +1168,9 @@ footer ul li a {
     .about .about-container {
         flex-direction: column;
         gap: 3rem;
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -1232,6 +1238,27 @@ footer ul li a {
 
     header .visit-btn {
         display: none;
+    }
+    
+    /* Additional mobile fixes for name animation */
+    .info-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .name-typewriter {
+        font-size: 1.8rem;
+        max-width: 85vw;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    .info-box h1 {
+        font-size: 2rem;
+        max-width: 100%;
+        overflow: hidden;
+        word-wrap: break-word;
     }
 }
 
@@ -1325,6 +1352,9 @@ footer ul li a {
     opacity: 1;
     width: 100%;
     color: transparent;
+    max-width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .name-typewriter.typing {
@@ -1334,7 +1364,6 @@ footer ul li a {
     animation: typing 3.5s steps(40, end), blink-caret .75s step-end 8;
     animation-fill-mode: forwards;
 }
-
 
 @keyframes typing {
     from { 
@@ -1350,6 +1379,45 @@ footer ul li a {
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: rgb(173, 216, 230); }
+}
+
+/* Mobile responsive fixes for typewriter animation */
+@media (max-width: 768px) {
+    .name-typewriter {
+        font-size: 2rem;
+        max-width: 90vw;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    .info-box h1 {
+        font-size: 2.5rem;
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .name-typewriter {
+        font-size: 1.8rem;
+        max-width: 85vw;
+    }
+    
+    .info-box h1 {
+        font-size: 2rem;
+    }
+    
+    .info-box {
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .about .about-container {
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 /* Scroll Animations */
